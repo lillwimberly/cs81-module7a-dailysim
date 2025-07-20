@@ -18,55 +18,13 @@
     </div>
 
     <script>
-      // const output = document.getElementById('output');
-      // const start = Date.now();
-      // let minCounter = 0;
-      // const maxMin = 480;
-      // //console.log(Date.now()); // 60000 milliseconds in min
-
-      // const runSimulatedDay = () => {
-      //   // const start = Date.now();
-      //   // let minCounter = 0;
-      //   // const maxMin = 480;
-      //   // function to track the mins since start
-      //   const minTimerID = setInterval(() => {
-      //     const ms = Date.now() - start;
-      //     minCounter += 1;
-      //     if (minCounter >= maxMin) {
-      //       // turn off timer after 8 hours
-      //       clearInterval(minTimerID);
-      //     }
-      //     // console.log(ms, minCounter);
-      //     //console.log(`seconds elasped = ${Math.floor(ms / 1000)}`);
-      //     // checkTask
-      //     setTask();
-      //   }, 600);
-
-      //   const setTask = () => {
-      //     console.log(minCounter);
-      //     // if (minCounter > 1) {
-      //     //   setTimeout(() => {
-      //     //     output.textContent = 'Morning coffee time';
-      //     //   }, 6000);
-      //     //   else if (minCounter < 60 && minCounter > 120)
-      //     // }
-      //     setTimeout(() => {
-      //       output.textContent = 'Morning coffee time';
-      //     }, 800);
-      //     setTimeout(() => {
-      //       output.textContent = 'Time for exercise, go for a walk!';
-      //     }, 1200);
-      //   };
-      // };
-
-      // // runSimulatedDay();
       const output = document.getElementById('output');
       const start = Date.now();
       let minCounter = 0;
       const maxMin = 360; // # of mins in 6 hours
 
+      // function to track the mins since start
       const runSimulatedDay = () => {
-        // function to track the mins since start
         const minTimerID = setInterval(() => {
           minCounter += 1;
           if (minCounter > maxMin / 2) output.style.backgroundColor = 'yellow';
@@ -79,6 +37,7 @@
         }, 60000);
       };
 
+      // func to set the correct task
       const setTask = () => {
         console.log(minCounter);
         setTimeout(() => {
